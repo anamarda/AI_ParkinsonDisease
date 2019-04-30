@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2ededa72-fc56-46db-8347-e578d4e5d46e}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>main.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="data\DB\" />
+    <Folder Include="data\parkinson\" />
+    <Folder Include="domain\" />
+    <Folder Include="gui\" />
+    <Folder Include="service\" />
+    <Folder Include="repo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="domain\Data.py" />
+    <Compile Include="gui\GUI_app.py" />
+    <Compile Include="main.py" />
+    <Compile Include="repo\Normalizator.py" />
+    <Compile Include="repo\Repo.py" />
+    <Compile Include="service\GradientDescentMethod.py" />
+    <Compile Include="service\LeastSquareMethod.py" />
+    <Compile Include="service\withoutTool.py" />
+    <Compile Include="service\withTool.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\best one.JPG" />
+    <Content Include="data\dataTest.txt" />
+    <Content Include="data\DB\parkinsons_updrs.data" />
+    <Content Include="data\ParkinsonPhoto.png" />
+    <Content Include="data\ParkinsonPhoto2.png" />
+    <Content Include="data\parkinsons_updrs.txt" />
+    <Content Include="data\parkinson\example_parkinson_01_results.txt" />
+    <Content Include="data\parkinson\example_parkinson_01_test.txt" />
+    <Content Include="data\parkinson\example_parkinson_01_train.txt" />
+    <Content Include="data\test.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
